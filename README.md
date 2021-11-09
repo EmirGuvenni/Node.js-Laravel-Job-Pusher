@@ -8,4 +8,11 @@ The library serializes the given parameters, adds the necessary attributes to ma
 
 Optionally, you could only use the LaravelJob class to create a serialized job and send it with your own functions.
 
-This package is made and maintained by Emir Güvenni <contact@emirguvenni.com>.
+# Troubleshooting
+
+- Your Laravel jobs must be stored in `app/jobs/` directory.
+- Your queue name has to match with the Laravel project's queue name.
+
+---
+
+Please report bugs [here](https://github.com/EmirGuvenni/Node.js-Laravel-Job-Pusher/issues)
