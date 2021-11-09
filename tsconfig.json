@@ -1,0 +1,17 @@
+{
+	"include": [
+		"src/**/*.ts"
+	],
+	"compilerOptions": {
+		"target": "ES6",
+		"module": "CommonJS",
+		"declarationDir": "types",
+		"declaration": true,
+		"rootDir": "./src",
+		"outDir": "./dist",
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"strict": true
+	}
+}
