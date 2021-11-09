@@ -27,7 +27,7 @@ export default class LaravelJob {
   public tags: string[];
   public pushedAt: number;
 
-  constructor(jobName: string, jobData: object) {
+  constructor(jobName: string, jobData?: object) {
     /**
      * Create the command payload
      */
@@ -45,9 +45,11 @@ export default class LaravelJob {
     command.__addAttr__('chained', 'string', new php.Class(), 'array');
 
     // Add the job data to the command
-    Object.entries(jobData).forEach(([key, value]) => {
-      command.__addAttr__(key, 'string', value, typeof value);
-    });
+    if (jobData) {
+      Object.entries(jobData).forEach(([key, value]) => {
+        command.__addAttr__(key, 'string', value, typeof value);
+      });
+    }
 
     const randomUUID: string = uuidv4();
 
