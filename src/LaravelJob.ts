@@ -28,6 +28,9 @@ export default class LaravelJob {
   public pushedAt: number;
 
   constructor(jobName: string, jobData?: object) {
+    if (jobName.match(/[\/\\]/))
+      throw new Error('Job name cannot contain slashes or backslashes');
+
     /**
      * Create the command payload
      */
