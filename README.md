@@ -11,7 +11,7 @@ Optionally, you could only use the LaravelJob class to create a serialized job a
 # Troubleshooting
 
 - Your Laravel jobs must be stored in the `app/jobs/` directory.
-- Your queue name has to match with the Laravel project's queue name.
+- Your queue name should match with your Laravel project's queue name.
 
 ---
 
