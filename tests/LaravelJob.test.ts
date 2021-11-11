@@ -1,4 +1,4 @@
-import { LaravelJob } from '..';
+import { LaravelJob } from '../src/index';
 
 test('Successful job creation', () => {
   const jobName: string = 'TestJob';
