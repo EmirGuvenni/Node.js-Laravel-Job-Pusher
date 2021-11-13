@@ -86,7 +86,7 @@ interface JobSenderOptions {
   jobName: string;
   jobData?: object;
   jobQueueName: string;
-  redisConnection?: RedisClient;
+  redisConnection: RedisClient;
 }
 
 /**
@@ -94,8 +94,6 @@ interface JobSenderOptions {
  *
  * This function expects the job to be in the App/Jobs/ directory
  */
-export default async function pushJob(
-  options: JobSenderOptions,
-): Promise<void> {
+export default function pushJob(options: JobSenderOptions): boolean {
   const job: LaravelJob = new LaravelJob(options.jobName, options.jobData);
 }
