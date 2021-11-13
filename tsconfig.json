@@ -5,7 +5,6 @@
 	"compilerOptions": {
 		"target": "ES6",
 		"module": "CommonJS",
-		"declarationDir": "types",
 		"declaration": true,
 		"rootDir": "./src",
 		"outDir": "./dist",
