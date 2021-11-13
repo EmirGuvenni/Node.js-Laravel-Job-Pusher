@@ -1,10 +1,10 @@
 {
   "name": "node.js-laravel-job-pusher",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A library to make pushing Laravel jobs to the Redis easier.",
   "main": "dist/index.js",
   "bin": "dist/index.js",
-  "types": "types/",
+  "types": "dist/index.d.ts",
   "repository": "git@github.com:EmirGuvenni/Node.js-Laravel-Job-Pusher.git",
   "author": "Emir Güvenni <contact@emirguvenni.com>",
   "license": "MIT",
