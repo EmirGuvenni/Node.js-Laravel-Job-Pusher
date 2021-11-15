@@ -1,3 +1,5 @@
+# !!! THIS PACKAGE IS UNDER DEVELOPMENT AND IS NOT READY TO USE YET !!!
+
 # Node.js-Laravel-Job-Pusher
 
 A library to make pushing Laravel jobs to the Redis easier.
