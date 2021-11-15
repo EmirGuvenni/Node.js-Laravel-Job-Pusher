@@ -1,6 +1,6 @@
 {
   "name": "node.js-laravel-job-pusher",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A library to make pushing Laravel jobs to the Redis easier.",
   "main": "dist/index.js",
   "bin": "dist/index.js",
