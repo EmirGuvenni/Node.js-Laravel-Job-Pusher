@@ -94,6 +94,21 @@ interface JobSenderOptions {
  *
  * This function expects the job to be in the App/Jobs/ directory
  */
-export default function pushJob(options: JobSenderOptions): boolean {
+export default function pushJob(options: JobSenderOptions): void | Error {
+  if (!options.jobQueueName) throw Error('Job queue name is required.');
+  else if (!options.jobName) throw Error('Job name is required.');
+  else if (!options.redisConnection)
+    throw Error(
+      'Redis connection is required for this method. You could use the LaravelJob class if you want the serialized job instead.',
+    );
+
   const job: LaravelJob = new LaravelJob(options.jobName, options.jobData);
+
+  options.redisConnection.rpush(
+    options.jobQueueName,
+    JSON.stringify(job),
+    (err: Error | null) => {
+      if (err) throw err;
+    },
+  );
 }
