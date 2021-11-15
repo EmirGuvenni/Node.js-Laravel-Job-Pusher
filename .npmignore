@@ -4,3 +4,4 @@ tslint.json
 jestconfig.json
 .prettierrc
 tests
+.vscode
